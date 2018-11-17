@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/public.css"/>
+    <link rel="stylesheet" href="assets/css/index.css"/>
+    <link rel="stylesheet" href="node_modules/swiper/dist/css/swiper.css"/>
+</head>
+
+<body>
+<div id="app">
+
+    <!----------------header-------------->
+    <header>
+        <div>
+            <div>
+                <i class="iconfont">&#xe612;</i>
+            </div>
+            <div>
+                <input type="text" value="搜索"/>
+            </div>
+            <div>
+                <i class="iconfont">&#xe70a;</i>
+            </div>
+        </div>
+    </header>
+    <!-----------------main---------------->
+    <main>
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <img class="swiper-slide" src="assets/img/banner.jpg" >
+                    <img class="swiper-slide" src="assets/img/banner1.jpg" >
+                    <img class="swiper-slide" src="assets/img/banner3.jpg" >
+                    <img class="swiper-slide" src="assets/img/banner4.jpg" >
+                    <img class="swiper-slide" src="assets/img/banner2.jpg" >
+                    <img class="swiper-slide" src="assets/img/banner6.jpg" >
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="node_modules/swiper/dist/js/swiper.js"></script>
+<script>
+    window.onload  = function(){
+        new Vue({
+            el:'#app',
+            mounted(){
+                new Swiper('.swiper-container',{
+                    autoplay:true,
+                    direction: 'horizontal',
+                    loop: true,
+
+                });
+            }
+        });
+
+
+
+
+
+
+    }
+
+</script>

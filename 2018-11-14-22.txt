@@ -1,0 +1,8 @@
+项目要求: WEBAPP 
+
+1.组件的折分和设计 Pascal props 
+2.组件的组合 props emit refs lifecircle
+3.模拟数据(前后台分开发项目) 学会分析 data methods
+4.页面过间的数据是完整
+
+index->search-list->detail->order->person home
