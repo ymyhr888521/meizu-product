@@ -9,7 +9,7 @@
 <script>
   import './flagBanner'
   import './flagList'
-    import FlagBanner from "./flagBanner";
+  import FlagBanner from "./flagBanner";
   import FlagList from "./flagList";
     export default {
         name: "flagMain",
