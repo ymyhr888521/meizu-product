@@ -53,15 +53,7 @@
             indexGuess,
             indexService
         },
-        // mounted() {
-        //     $('#main').scroll(function(){
-        //         if($(this).scrollTop()>=0) {
-        //           $('header').css({backgroundColor: 'rgba(255,255,255,1)'},300);
-        //         }
-        //     })
-        //
-        //
-        // }
+
   }
 </script>
 
