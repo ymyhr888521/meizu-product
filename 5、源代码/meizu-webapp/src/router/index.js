@@ -4,6 +4,7 @@ import index from '@/pages/index'
 import flag from  '../pages/flag'
 import goodsCart from '../pages/goodsCart'
 import mine from '../pages/mine'
+import find from '../pages/find'
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/mine',
       name: 'mine',
       component:mine
+    },
+    {
+      path: '/find',
+      name: 'find',
+      component:find
     },
   ]
 })
