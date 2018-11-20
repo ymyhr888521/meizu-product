@@ -2,11 +2,11 @@
   <footer>
     <div>
       <ul>
-        <li><a href="#"><i class="iconfont">&#xe629;</i><span>首页</span></a></li>
-        <li><a href="#"><i class="iconfont">&#xe638;</i><span>分类</span></a></li>
-        <li><a href="#"><i class="iconfont">&#xe746;</i><span>发现</span></a></li>
-        <li><a href="#"><i class="iconfont">&#xe602;</i><span>购物车</span></a></li>
-        <li><a href="#"><i class="iconfont">&#xe64a;</i><span>我的</span></a></li>
+        <li class="link"><a href="#"><i class="iconfont">&#xe629;</i><span>首页</span></a></li>
+        <li class="link"><a href="#"><i class="iconfont">&#xe638;</i><span>分类</span></a></li>
+        <li class="link"><a href="#"><i class="iconfont">&#xe746;</i><span>发现</span></a></li>
+        <li class="link"><a href="#"><i class="iconfont">&#xe602;</i><span>购物车</span></a></li>
+        <li class="link"><a href="#"><i class="iconfont">&#xe64a;</i><span>我的</span></a></li>
       </ul>
     </div>
   </footer>
@@ -15,7 +15,16 @@
 
 <script>
     export default {
-        name: "indexFooter"
+        name: "indexFooter",
+        mounted(){
+            console.log('-----------')
+            $('.link').each(function(){
+                $(this).click(function () {
+                  $(this).children('a').children('i,span').css({'color':'#188DED'});
+                  $(this).siblings().children('a').children('i,span').css({'color':'#666'});
+                })
+            })
+        }
     }
 </script>
 
@@ -59,15 +68,7 @@
 
   }
 
-  footer>div>ul>li:hover a>i{
-    color:#188DED;
-  }
-  footer>div>ul>li:hover a>span{
-    color:#188DED;
-  }
-
-
-  footer>div>ul>li:nth-of-type(1)>a>i, footer>div>ul>li:nth-of-type(1)>a>span{
+   footer>div>ul>li:nth-of-type(1)>a>i, footer>div>ul>li:nth-of-type(1)>a>span{
       color:#188DED;
   }
 </style>

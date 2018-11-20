@@ -3,14 +3,14 @@
     <header class='header' id="header">
         <div>
             <div>
-                <i class="iconfont">&#xe612;</i>
+                <i class="iconfont iconm">&#xe612;</i>
             </div>
             <div>
                 <input type="text" placeholder="搜索"/>
             </div>
             <div>
               <a href="#">
-                <i class="iconfont">&#xe70a;</i>
+                <i class="iconfont iconl">&#xe70a;</i>
               </a>
             </div>
         </div>
@@ -28,11 +28,12 @@
             $('#main').scroll(function () {
                 var top = $(this).scrollTop();
                 if(top>=35){
-                    $('#header i').css({'color':'#00B4FF'})
+                  $('#header .iconm').css({'color':'#00B4FF'});
+                  $('#header .iconl').css({'color':'#666'});
                 }else{
                     $('#header i').css({'color':'#fff'})
                 }
-                console.log(top)
+                // console.log(top)
                 $('#header').css({'background-color':"rgba"+"(255,255,255,"+top/52+")"});
             });
         }
@@ -82,7 +83,7 @@
           background: url("../../assets/img/soso.png") no-repeat .18rem center;
           background-size:.2rem .2rem;
           background-color:#C5C3C8;
-          opacity:.6;
+          opacity:.5;
           text-indent: 2.6em;
           font-size: .2rem;
           color:#757279;

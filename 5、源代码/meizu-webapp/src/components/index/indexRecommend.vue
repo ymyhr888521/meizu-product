@@ -76,8 +76,6 @@
     }
 
 
-
-
     .recommend>.contain>ul>li>div{
         flex:0 0 100%;
         display: flex;

@@ -17,7 +17,7 @@
 .cart-header{
     padding:.24rem .24rem;
     border-bottom: 1px solid #E6E6E6;
-    margin-bottom: .18rem;
+
     background-color: #fff;
 }
 .cart-header>div{

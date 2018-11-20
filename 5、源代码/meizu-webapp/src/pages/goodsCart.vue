@@ -9,7 +9,7 @@
 <script>
     import goodsHeader from '../components/goodsCart/goodsCartHeader'
     import goodsCartMain from '../components/goodsCart/goodsCartMain'
-    import indexFooter from '../components/goodsCart/indexFooter'
+    import indexFooter from '../components/index/indexFooter'
     export default {
         name: "goodsCart",
         components:{
