@@ -2,19 +2,19 @@
     <div class="order">
         <div class="top">
             <h3>我的订单</h3>
-            <a href="#">
+            <router-link to="/MyOrder" >
                 <span>全部订单</span>
                 <img src="../../../static/dy.png" >
-            </a>
+            </router-link>
         </div>
 
 
         <div class="bottom">
             <ul>
-                <li v-for="(item,index) in imgs">
+                <li v-for="(item,index) in msg.imgs">
                     <a href="#">
                         <img :src="item">
-                        <span>{{intro[index]}}</span>
+                        <span>{{msg.intro[index]}}</span>
                     </a>
                 </li>
             </ul>
@@ -25,12 +25,13 @@
 <script>
     export default {
         name: "myOrder",
-        data(){
-            return {
-                imgs:['../../../static/1w.png','../../../static/2w.png','../../../static/3w.png','../../../static/4w.png'],
-                intro:['待付款','待发货','待收货','退款/售后']
-            }
-        }
+        props:["msg"],
+        // data(){
+        //     return {
+        //         imgs:['../../../static/1w.png','../../../static/2w.png','../../../static/3w.png','../../../static/4w.png'],
+        //         intro:['待付款','待发货','待收货','退款/售后']
+        //     }
+        // }
     }
 </script>
 

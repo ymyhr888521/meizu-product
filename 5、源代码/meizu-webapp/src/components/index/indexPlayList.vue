@@ -2,7 +2,7 @@
    <div class="play">
         <div>
             <ul>
-              <li v-for="(item,index) in titles"><a href="#"><i><img :src='imgs[index]'></i><span>{{item}}</span></a></li>
+              <li v-for="(item,index) in msg.imgs"><a href="#"><i><img :src='item'></i><span>{{msg.titles[index]}}</span></a></li>
 
             </ul>
         </div>
@@ -12,30 +12,7 @@
 <script>
     export default {
         name: "indexPlayList",
-        data(){
-            return{
-                imgs:[
-                    '../../static/p1.png',
-                    '../../static/p2.png',
-                    '../../static/p3.png',
-                    '../../static/p4.png',
-                    '../../static/p5.png',
-                    '../../static/p6.png',
-                    '../../static/p7.png',
-                    '../../static/p8.png',
-                ],
-                titles:[
-                    '签到福利',
-                    '会员领券',
-                    '以旧换新',
-                    '超值砍价',
-                    '热销手机',
-                    '配件声学',
-                    '数码科技',
-                    '居家个护'
-                ]
-            }
-        }
+        props:["msg"],
     }
 </script>
 

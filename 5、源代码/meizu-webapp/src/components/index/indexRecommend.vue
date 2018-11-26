@@ -1,14 +1,14 @@
 <template>
-    <div class="recommend">
-        <div class="title">{{title}}</div>
+    <div class="recommend" >
+        <div class="title">{{msg.title}}</div>
         <div class="contain">
             <ul>
-                <li v-for="(item,index) in bgColor" v-color="item">
+                <li v-for="(item,index) in msg.bgColor" v-color="item">
                     <div>
-                      <img v-if="imgs[index]" :src="imgs[index]" />
-                          <h3 v-if="!imgs[index]">{{name[index]}}</h3>
-                          <p v-if="!imgs[index]">{{info[index]}}</p>
-                          <p v-if="!imgs[index]"><span>{{nowPri[index]}}</span><span>{{beforePri[index]}}</span></p>
+                      <img v-if="msg.imgs[index]" :src="msg.imgs[index]" />
+                          <h3 v-if="!msg.imgs[index]">{{msg.name[index]}}</h3>
+                          <p v-if="!msg.imgs[index]">{{msg.info[index]}}</p>
+                          <p v-if="!msg.imgs[index]"><span>{{msg.nowPri[index]}}</span><span>{{msg.beforePri[index]}}</span></p>
                     </div>
                 </li>
             </ul>
@@ -22,22 +22,10 @@
 
     export default {
         name: "indexRecommend",
-
-        data(){
-            return{
-                title:'新品推荐',
-                imgs:['../../../static/ood.png','','','../../../static/ood2.png','../../../static/ood3.png',''],
-                name:['','魅族移动电源','魅族EP-31耳机','','','先锋(pioneer)ASP-AD122A 双...'],
-                info:['','双向快充双充电口 轻薄小','舒适均衡 精致优雅','','','双USB口,快充插头'],
-                nowPri:['','￥79','￥99','','','￥79'],
-                beforePri:['','','￥199','','',''],
-                bgColor:['#ABD0D6','#04BFCE','#FF5756','#DECCCC','#DCCFBF','#FF9A2E']
-            }
-        },
+        props:['msg'],
         directives:{
             color(el,binding){
                 el.style.backgroundColor= binding.value;
-                // console.log(binding);
       }}
 
 

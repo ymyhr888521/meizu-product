@@ -2,18 +2,18 @@
     <div class="main" id="main">
         <index-banner></index-banner>
         <index-product-info></index-product-info>
-        <index-play-list></index-play-list>
-        <index-limited-buy></index-limited-buy>
+        <index-play-list :msg="msg.indexPlayList"></index-play-list>
+        <index-limited-buy :msg="msg.indexLimitedBuy"></index-limited-buy>
         <index-phone-img></index-phone-img>
-        <index-star-pro></index-star-pro>
-        <index-hot-phone></index-hot-phone>
-        <index-hot-fitting></index-hot-fitting>
-        <index-recommend></index-recommend>
-        <index-media-play></index-media-play>
-        <index-music></index-music>
-        <index-life></index-life>
-        <indexGuess></indexGuess>
-        <index-service></index-service>
+        <index-star-pro :msg="msg.indexStarPro"></index-star-pro>
+        <index-hot-phone :msg="msg.indexHotPhone"></index-hot-phone>
+        <index-hot-fitting :msg="msg.indexHotFitting"></index-hot-fitting>
+        <index-recommend :msg="msg.indexRecommend"></index-recommend>
+        <index-media-play :msg="msg.indexMediaPlay"></index-media-play>
+        <index-music :msg="msg.indexMusic"></index-music>
+        <index-life :msg="msg.indexLife"></index-life>
+        <indexGuess :msg="msg.indexGuess"></indexGuess>
+        <index-service :msg="msg.indexService"></index-service>
     </div>
 </template>
 
@@ -53,6 +53,7 @@
             indexGuess,
             indexService
         },
+    props:['msg']
 
   }
 </script>

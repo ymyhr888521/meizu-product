@@ -21,7 +21,6 @@
 <style scoped>
     .header{
         height:2.67rem;
-        background: #ff0;
         position: relative;
     }
     .header>div:nth-of-type(1){

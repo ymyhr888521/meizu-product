@@ -6,7 +6,7 @@
 
           <div class="bottom">
               <ul>
-                <li v-for="(item,index) in imgs">
+                <li v-for="(item,index) in msg.imgs">
                   <img :src="item">
                 </li>
               </ul>
@@ -17,11 +17,12 @@
 <script>
     export default {
         name: "sort",
-        data(){
-            return {
-                imgs:['../../../static/sort1.png','../../../static/sort2.png','../../../static/sort3.png','../../../static/sort4.png']
-            }
-        }
+        props:['msg']
+        // data(){
+        //     return {
+        //         imgs:['../../../static/sort1.png','../../../static/sort2.png','../../../static/sort3.png','../../../static/sort4.png']
+        //     }
+        // }
     }
 </script>
 

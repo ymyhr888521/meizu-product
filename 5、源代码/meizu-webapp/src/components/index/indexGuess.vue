@@ -1,16 +1,16 @@
 <template>
-  <div class="all">
-    <div class="title">{{title}}</div>
+  <div class="all" v-if="msg">
+    <div class="title">{{msg.title}}</div>
 
     <div class="bottom">
       <div class="contain">
-        <div v-for="(item,index) in imgs" class="goods">
-          <div v-color="color[index]">
-            <img :src="item">
+        <div v-for="(item,index) in msg.color" class="goods">
+          <div v-color="item">
+            <img :src="msg.imgs[index]">
           </div>
           <div>
-            <h3>{{name[index]}}</h3>
-            <span>{{nowPri[index]}}</span>
+            <h3>{{msg.name[index]}}</h3>
+            <span>{{msg.nowPri[index]}}</span>
           </div>
         </div>
       </div>
@@ -21,15 +21,7 @@
 <script>
   export default {
     name: "indexGuess",
-    data(){
-      return {
-        title:'猜您喜欢',
-        name:['魅蓝6s全金属','魅族16th','魅族15 重塑经典','魅族PRO7','魅蓝s6 ','魅蓝E3 骁龙636','魅族 PRO6s','魅族16X','先锋SEC-CL31','先锋SEC-CL31'],
-        imgs:['../../static/guess.png', '../../static/guess1.png', '../../static/guess2.png', '../../static/guess3.png', '../../static/guess4.png', '../../static/guess5.png', '../../static/guess6.png', '../../static/guess7.png', '../../static/guess8.png', '../../static/guess9.png'],
-        nowPri:['￥699起', '￥2998起', '￥1998起', '￥129', '￥139', '￥229', '￥169', '￥129', '￥139', '￥229'],
-        color:['#6A9464','#F25A59','#6666cc','#6C9366','#1CAFB9','#E0602F','#1FADB9','#DC6430','#6C9366','#F45C5B']
-      }
-    },
+    props:["msg"],
     directives:{
         color(el,bidding){
             el.style.backgroundColor = bidding.value;

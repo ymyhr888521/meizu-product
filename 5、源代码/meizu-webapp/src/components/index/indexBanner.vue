@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  import 'swiper/dist/css/swiper.css'
   import Swiper from 'swiper/dist/js/swiper'
      export default {
          name: 'indexBanner',

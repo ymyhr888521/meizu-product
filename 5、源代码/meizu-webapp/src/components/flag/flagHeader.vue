@@ -2,7 +2,7 @@
     <div class="head">
         <div>
             <div>
-                <a href="#"></a>
+              <router-link to="/mine"></router-link>
             </div>
 
             <div>

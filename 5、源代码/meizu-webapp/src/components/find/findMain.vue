@@ -1,8 +1,8 @@
 <template>
     <div class="main">
-        <sort></sort>
-        <passage></passage>
-        <new-pro></new-pro>
+        <sort :msg="msg.sortData"></sort>
+        <passage :msg="msg.passage"></passage>
+        <new-pro :msg="msg.newPro"></new-pro>
     </div>
 </template>
 
@@ -12,7 +12,8 @@
     import NewPro from "./newPro";
     export default {
         name: "findMain",
-      components: {NewPro, Passage, Sort}
+        props:["msg"],
+        components: {NewPro, Passage, Sort}
     }
 </script>
 

@@ -1,21 +1,19 @@
 <template>
   <div class="all-contain">
-    <div class="title">{{title}}</div>
+    <div class="title">{{msg.title}}</div>
     <div class="show">
-      <img :src="banner">
+      <img :src="msg.banner">
     </div>
     <div class="box-phone">
       <div class="contain">
-        <ul>
-          <li v-for="(item,index) in imgs">
+        <ul >
+          <li :key="index" v-for="(item,index) in msg.imgs">
             <div>
               <img :src="item">
             </div>
-
-            <h3>{{name[index]}}</h3>
-            <p>{{info[index]}}</p>
-            <p><span>{{newPri[index]}}</span><span>{{beforePri[index]}}</span></p>
-
+            <h3>{{msg.name[index]}}</h3>
+            <p>{{msg.info[index]}}</p>
+            <p><span>{{msg.newPri[index]}}</span><span>{{msg.beforePri[index]}}</span></p>
           </li>
         </ul>
       </div>
@@ -28,17 +26,7 @@
 <script>
     export default {
         name: "indexHotFitting",
-        data(){
-            return {
-                title:'热卖配件',
-                banner:'../../../static/banner2.png',
-                imgs:['../../../static/e2.png','../../../static/e1.png','../../../static/e3.png','../../../static/e4.png','../../../static/e5.png','../../../static/e6.png','../../../static/e7.png','../../../static/e8.png'],
-                name:['魅蓝 EP52 蓝牙耳机','魅族EP-31 蓝牙耳机','魅族Gravity悬浮音响','POP 真无线蓝牙耳机','Lifeme 暖手宝移动电源','魅族路由器 极速版','魅族盒子 一键找回遥控器','魅族 Flow Bass 三单元耳机'],
-                info:['轻盈悦耳 动无拘束','舒适均衡 精致优雅','浮光掠影 打造科幻般的透镜屏显','六期免息 双无线 零设限','随时随地温暖你','天生不凡 快很狠稳','一键找回遥控器,海量容量，4...','延续经典 重赋新声'],
-                newPri:['￥199','￥99','￥1099','￥499','￥69','￥69','￥99','￥399'],
-                beforePri:['￥299','￥199','','￥499','￥169','199','￥399','￥599']
-          }
-        }
+        props:["msg"]
     }
 </script>
 

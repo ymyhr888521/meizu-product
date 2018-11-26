@@ -5,14 +5,14 @@
         </div>
 
         <div class="bottom">
-            <dl v-for="(item,index) in imgs">
+            <dl v-for="(item,index) in msg.imgs">
                 <dt>
                     <img :src="item" >
                 </dt>
 
                 <dd>
-                    <div><p>{{intro[index]}}</p></div>
-                    <div><span>{{origin.com[index]}}</span><span>{{origin.num[index]}}</span></div>
+                    <div><p>{{msg.intro[index]}}</p></div>
+                    <div><span>{{msg.origin.com[index]}}</span><span>{{msg.origin.num[index]}}</span></div>
                 </dd>
             </dl>
         </div>
@@ -22,13 +22,14 @@
 <script>
     export default {
         name: "passage",
-        data(){
-            return {
-                imgs:['../../../static/pass1.png','../../../static/pass2.png','../../../static/pass3.png','../../../static/pass4.png','../../../static/pass5.png','../../../static/pass6.png','../../../static/pass7.png'],
-                intro:['黄章全力之作！魅族16新旗舰首发测评：15年来性能、拍照巅峰','黄章亲自打造的轻奢旗舰魅族16X体验报告,能否继续真香?','App活动中奖名单公布(新增万能兑换券名单)','第一手对比!魅族16X和魅族16竟有这些区别','更好、更强大,全新魅族社区APP正式发布','魅族EP52 lite上手图赏:好看的小姐姐,都会选这款耳机','魅族蓝牙音频接收器深度测评'],
-                origin:{com:['快科技','魅族商城','魅族商城','魅族社区-王员外可爱多','魅族商城','魅族商城','我爱音频网'],num:['89899阅读','89899阅读','14899阅读','38335阅读','39439阅读','9839阅读','29391阅读']}
-            }
-        }
+        props:["msg"],
+        // data(){
+        //     return {
+        //         imgs:['../../../static/pass1.png','../../../static/pass2.png','../../../static/pass3.png','../../../static/pass4.png','../../../static/pass5.png','../../../static/pass6.png','../../../static/pass7.png'],
+        //         intro:['黄章全力之作！魅族16新旗舰首发测评：15年来性能、拍照巅峰','黄章亲自打造的轻奢旗舰魅族16X体验报告,能否继续真香?','App活动中奖名单公布(新增万能兑换券名单)','第一手对比!魅族16X和魅族16竟有这些区别','更好、更强大,全新魅族社区APP正式发布','魅族EP52 lite上手图赏:好看的小姐姐,都会选这款耳机','魅族蓝牙音频接收器深度测评'],
+        //         origin:{com:['快科技','魅族商城','魅族商城','魅族社区-王员外可爱多','魅族商城','魅族商城','我爱音频网'],num:['89899阅读','89899阅读','14899阅读','38335阅读','39439阅读','9839阅读','29391阅读']}
+        //     }
+        // }
     }
 </script>
 

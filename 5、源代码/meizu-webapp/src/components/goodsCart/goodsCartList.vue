@@ -5,16 +5,16 @@
             <h3>魅族</h3>
         </div>
 
-        <div class="info clicker"  v-for="(item,index) in phoneList.img">
+        <div class="info clicker"  v-for="(item,index) in msg.img">
             <a href="#" class="changeicon"><img src="../../assets/img/full.png"></a>
             <dl>
                 <dt>
                   <img :src="item">
                 </dt>
                 <dd>
-                    <h3>{{phoneList.name[index]}}</h3>
-                    <p>{{phoneList.info[index]}}</p>
-                    <h3>{{phoneList.price[index]}}</h3>
+                    <h3>{{msg.name[index]}}</h3>
+                    <p>{{msg.info[index]}}</p>
+                    <h3>{{msg.price[index]}}</h3>
                 </dd>
             </dl>
             <div>
@@ -30,15 +30,10 @@
 <script>
     export default {
         name: "goodsCartList",
+        props:['msg'],
         data(){
             return {
-                flag:true,
-                phoneList:{
-                  img:['../../../static/goods1.png','../../../static/goods2.png','../../../static/goods3.png'],
-                  name:['魅族 16X','魅族 15 Plus','魅族 16th Plus','魅族 X8'],
-                  info:['全网通公开版 烟晶紫 6+128G','全网通公开版 玄武灰 6+64G','全网通公开版 极光蓝 8+256G'],
-                  price:['￥2398.00','￥2498.00','￥4098.00']
-                }
+                flag:true
             }
         },
         mounted() {

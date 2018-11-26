@@ -1,7 +1,7 @@
 <template>
     <div class="main">
-        <goods-cart-list></goods-cart-list>
-        <index-hot-phone></index-hot-phone>
+        <goods-cart-list :msg="msg.phoneList"></goods-cart-list>
+        <index-hot-phone :msg="msg.indexHotPhone"></index-hot-phone>
         <goods-cart-total></goods-cart-total>
 
     </div>
@@ -13,7 +13,8 @@
     import GoodsCartTotal from "./goodsCartTotal";
     export default {
         name: "goodsCartMain",
-      components: {GoodsCartTotal, IndexHotPhone,GoodsCartList}
+        props:['msg'],
+        components: {GoodsCartTotal, IndexHotPhone,GoodsCartList}
     }
 </script>
 

@@ -4,12 +4,12 @@
             <h3>最新推荐</h3>
         </div>
         <div class="bottom">
-            <div class="contain" v-for="(item,index) in imgs">
+            <div class="contain" v-for="(item,index) in msg.imgs">
                 <img :src="item">
                 <div>
-                    <h3>{{intro[index]}}</h3>
-                    <p>{{word[index]}}</p>
-                    <p><span>{{origin.add[index]}}</span><span>{{origin.num[index]}}</span></p>
+                    <h3>{{msg.intro[index]}}</h3>
+                    <p>{{msg.word[index]}}</p>
+                    <p><span>{{msg.origin.add[index]}}</span><span>{{msg.origin.num[index]}}</span></p>
                 </div>
             </div>
         </div>
@@ -19,14 +19,15 @@
 <script>
     export default {
         name: "newPro",
-        data(){
-            return{
-                imgs:['../../../static/new1.png','../../../static/new2.png','../../../static/new3.png'],
-                intro:['方寸之间,物尽其用--向杂乱无章的工作状态...','AR体感互动 让你大户过瘾','不打扰,是我的温柔 --黑爵i18小清新无线...'],
-                word:['生活有太多不确定性,整理物品亦是整理人生,厘清生活的重点,从杂乱无章的工作状态开始吧!','各位小伙伴们,你们知道啥是AR技术吗?其实所谓的AR技术,他还有一个名称就是增强现实技术。AR技术能够将...','不知为何,人一旦成长成熟之后便会低调不少,喜欢上的东西也会偏向纯净如水的清新。这绝不是什么愤世嫉...'],
-                origin:{add:['魅族商场','魅族商场','魅族商场'],num:['18787人阅读','82723人阅读','28337人阅读',]}
-            }
-        }
+        props:['msg'],
+        // data(){
+        //     return{
+        //         imgs:['../../../static/new1.png','../../../static/new2.png','../../../static/new3.png'],
+        //         intro:['方寸之间,物尽其用--向杂乱无章的工作状态...','AR体感互动 让你大户过瘾','不打扰,是我的温柔 --黑爵i18小清新无线...'],
+        //         word:['生活有太多不确定性,整理物品亦是整理人生,厘清生活的重点,从杂乱无章的工作状态开始吧!','各位小伙伴们,你们知道啥是AR技术吗?其实所谓的AR技术,他还有一个名称就是增强现实技术。AR技术能够将...','不知为何,人一旦成长成熟之后便会低调不少,喜欢上的东西也会偏向纯净如水的清新。这绝不是什么愤世嫉...'],
+        //         origin:{add:['魅族商场','魅族商场','魅族商场'],num:['18787人阅读','82723人阅读','28337人阅读',]}
+        //     }
+        // }
     }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="all">
         <div class="top">
-            <h3>{{title}}</h3>
+            <h3>{{msg.title}}</h3>
             <div>
                 <span>{{hours}}</span>:
                 <span>{{minutes}}</span>:
@@ -10,13 +10,13 @@
         </div>
         <div class="bottom">
             <div class="contain">
-                <div v-for="(item,index) in imgs" class="goods">
+                <div v-for="(item,index) in msg.imgs" class="goods">
                     <div>
                       <img :src="item">
                     </div>
                     <div>
-                        <span>{{nowPri[index]}}</span>
-                        <span>{{beforePri[index]}}</span>
+                        <span>{{msg.nowPri[index]}}</span>
+                        <span>{{msg.beforePri[index]}}</span>
                     </div>
                 </div>
             </div>
@@ -27,50 +27,12 @@
 <script>
     export default {
         name: "indexLimitedBuy",
+        props:["msg"],
         data(){
             return {
-            seconds:59,
-            minutes:59,
-            hours:23,
-            title:'限时购',
-                  imgs:[
-                      '../../static/x1.png',
-                      '../../static/guess1.png',
-                      '../../static/guess2.png',
-                      '../../static/guess3.png',
-                      '../../static/guess4.png',
-                      '../../static/guess5.png',
-                      '../../static/guess6.png',
-                      '../../static/guess7.png',
-                      '../../static/guess8.png',
-                      '../../static/guess.png'
-                  ],
-                  nowPri:[
-                      '￥9.90',
-                      '￥9.90',
-                      '￥169',
-                      '￥129',
-                      '￥139',
-                      '￥229',
-                      '￥169',
-                      '￥129',
-                      '￥139',
-                      '￥229'
-                  ],
-
-                  beforePri:[
-                      '￥38',
-                      '￥39',
-                      '￥179',
-                      '￥129',
-                      '￥139',
-                      '￥229',
-                      '￥169',
-                      '￥129',
-                      '￥139',
-                      '￥229'
-                  ],
-
+                seconds:59,
+                minutes:59,
+                hours:23,
               }
         },
         methods:{

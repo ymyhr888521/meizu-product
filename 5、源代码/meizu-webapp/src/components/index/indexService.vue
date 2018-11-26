@@ -1,14 +1,14 @@
 <template>
     <div class="all">
-        <div class="title">{{title}}</div>
+        <div class="title">{{msg.title}}</div>
         <div class="server">
             <ul>
-                <li v-for="(item,index) in imgs">
+                <li v-for="(item,index) in msg.imgs">
                     <a href="#">
                         <i><img :src="item"></i>
                         <p>
-                            <span>{{bigF[index]}}</span>
-                            <span>{{smallF[index]}}</span>
+                            <span>{{msg.bigF[index]}}</span>
+                            <span>{{msg.smallF[index]}}</span>
                         </p>
                     </a>
                 </li>
@@ -22,14 +22,7 @@
 <script>
     export default {
         name: "indexService",
-        data(){
-            return{
-                title:'官方品质服务',
-                imgs:['../../../static/icon1.png','../../../static/icon2.png','../../../static/icon3.png'],
-                bigF:['Arrive','Query','Repair'],
-                smallF:['百城速达','真伪查询','上门快修']
-            }
-        }
+        props:["msg"]
     }
 </script>
 

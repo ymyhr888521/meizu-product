@@ -1,18 +1,18 @@
 <template>
   <div class="all">
     <div class="top">
-        <img :src="banner">
+        <img :src="msg.banner">
     </div>
     <div class="bottom">
       <div class="contain">
-        <div v-for="(item,index) in imgs" class="goods">
+        <div v-for="(item,index) in msg.imgs" class="goods">
           <div>
             <img :src="item">
           </div>
           <div>
-            <h3>{{name[index]}}</h3>
-            <p>{{info[index]}}</p>
-            <span>{{nowPri[index]}}</span>
+            <h3>{{msg.name[index]}}</h3>
+            <p>{{msg.info[index]}}</p>
+            <span>{{msg.nowPri[index]}}</span>
           </div>
         </div>
       </div>
@@ -23,40 +23,7 @@
 <script>
   export default {
     name: "indexMusic",
-    data(){
-      return {
-        banner:'../../static/banner3.png',
-        title:'限时购',
-        name:['先锋SEC-CL31 HIFI','先锋SEC-CL32','SKY-CLI HIFI','SEC-CL31 HIFI','CL31 HIFI','先锋SEC-HIFI','SU-CL31 HIFI','SEC-C1 HIFI','先锋SEC-CL31 HIFI','先锋SEC-CL31 HIFI'],
-        info:['个性铁三角设计 佩戴舒适','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择','绝佳音质 强劲低音 多色选择',],
-        imgs:[
-          '../../static/play2.png',
-          '../../static/play3.png',
-          '../../static/play4.png',
-          '../../static/play5.png',
-          '../../static/play6.png',
-          '../../static/play7.png',
-          '../../static/play8.png',
-          '../../static/e3.png',
-          '../../static/e2.png',
-          '../../static/e1.png'
-        ],
-        nowPri:[
-          '￥9.90',
-          '￥9.90',
-          '￥169',
-          '￥129',
-          '￥139',
-          '￥229',
-          '￥169',
-          '￥129',
-          '￥139',
-          '￥229'
-        ],
-
-      }
-    },
-
+    props:["msg"]
   }
 </script>
 

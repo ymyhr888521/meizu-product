@@ -1,20 +1,20 @@
 <template>
     <div class="all-contain">
-        <div class="title">{{title}}</div>
+        <div class="title">{{msg.title}}</div>
         <div class="show">
-          <img :src="banner">
+          <img :src="msg.banner">
         </div>
         <div class="box-phone">
             <div class="contain">
                 <ul>
-                    <li v-for="(item,index) in imgs">
+                    <li v-for="(item,index) in msg.imgs">
                         <div>
                             <img :src='item' >
                         </div>
 
-                        <h3>{{name[index]}}</h3>
-                        <p>{{info[index]}}</p>
-                        <span>{{pri[index]}}</span>
+                        <h3>{{msg.name[index]}}</h3>
+                        <p>{{msg.info[index]}}</p>
+                        <span>{{msg.pri[index]}}</span>
 
                     </li>
                 </ul>
@@ -28,16 +28,7 @@
 <script>
     export default {
         name: "indexHotPhone",
-        data(){
-            return {
-                title:'热卖手机',
-                banner:'../../../static/banner.png',
-                imgs:['../../../static/h1.png','../../../static/h2.png','../../../static/h3.png','../../../static/h4.png'],
-                name:['魅族 16X','魅族 16th','魅族 X8','魅蓝 6T'],
-                info:['骁龙710轻奢旗舰','骁龙845年度旗舰','人脸指纹双解锁','双摄全面屏,游戏长续航'],
-                pri:['￥2098','￥2798','￥1598起','￥799起']
-            }
-        }
+        props:['msg']
     }
 </script>
 
@@ -97,7 +88,7 @@
 }
 .all-contain>.box-phone>.contain>ul>li>div{
 
-    width:2.5rem;
+    width:2.29rem;
     height:2.52rem;
 
 }

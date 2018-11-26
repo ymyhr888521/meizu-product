@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <flag-banner></flag-banner>
-        <flag-list></flag-list>
+        <flag-list :msg="msg.flagList"></flag-list>
     </div>
 
 </template>
@@ -13,6 +13,7 @@
   import FlagList from "./flagList";
     export default {
         name: "flagMain",
+        props:["msg"],
         components:{
           name: "flagBanner", FlagList, FlagBanner,
 

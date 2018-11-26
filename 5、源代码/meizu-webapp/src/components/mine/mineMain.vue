@@ -1,7 +1,7 @@
 <template>
     <div class="main">
-        <my-order></my-order>
-        <service-list></service-list>
+        <my-order :msg="msg.myOrder"></my-order>
+        <service-list :msg="msg.serviceList"></service-list>
     </div>
 
 </template>
@@ -12,6 +12,7 @@
     import IndexFooter from "../index/indexFooter";
     export default {
         name: "mineMain",
+        props:['msg'],
       components: {IndexFooter, ServiceList, MyOrder}
     }
 </script>

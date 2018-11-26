@@ -1,13 +1,13 @@
 <template>
     <div class="all">
-        <dl v-for="(item,index) in imgs">
+        <dl v-for="(item,index) in msg.imgs">
             <dt>
                 <img :src="item">
             </dt>
 
-            <dd>
-                <h3>{{word[index]}}</h3>
-            </dd>
+            <router-link tag="dd" :to="msg.link[index]">
+                <h3>{{msg.word[index]}}</h3>
+            </router-link>
         </dl>
     </div>
 
@@ -16,12 +16,8 @@
 <script>
     export default {
         name: "serviceList",
-        data(){
-            return {
-                imgs:['../../../static/ms1.png','../../../static/ms2.png','../../../static/ms3.png','../../../static/ms4.png','../../../static/ms5.png','../../../static/ms6.png','../../../static/ms7.png','../../../static/ms8.png'],
-                word:['优惠券','红包','收货地址','附近门店','我的收藏','M码通道','以旧换新','设置']
-            }
-        }
+        props:['msg'],
+
     }
 </script>
 
@@ -53,6 +49,7 @@
   .all>dl>dd>h3{
       font-size: .23rem;
       color:#000;
+      font-weight: normal;
   }
 
 

@@ -1,17 +1,17 @@
 <template>
   <div class="all-contain">
-    <div class="title">{{title}}</div>
+    <div class="title">{{msg.title}}</div>
     <div class="box-phone">
       <div class="contain">
         <ul>
-          <li v-for="(item,index) in imgs">
+          <li v-for="(item,index) in msg.imgs">
             <div>
               <img :src="item">
             </div>
 
-            <h3>{{name[index]}}</h3>
-            <p>{{info[index]}}</p>
-            <p><span>{{newPri[index]}}</span><span>{{beforePri[index]}}</span></p>
+            <h3>{{msg.name[index]}}</h3>
+            <p>{{msg.info[index]}}</p>
+            <p><span>{{msg.newPri[index]}}</span><span>{{msg.beforePri[index]}}</span></p>
 
           </li>
         </ul>
@@ -26,16 +26,7 @@
 <script>
   export default {
     name: "indexMediaPaly",
-    data(){
-      return {
-        title:'影音娱乐',
-        imgs:['../../../static/play1.png','../../../static/play2.png','../../../static/play3.png','../../../static/play4.png','../../../static/play5.png','../../../static/play6.png','../../../static/play7.png','../../../static/play8.png'],
-        name:['魅族蓝牙音频接收器','魅族 EP-52 蓝牙耳机','魅族 EP-51 蓝牙耳机','先锋SEC-E221BT无线...','JBL T205 半入耳式音','Beats urBeats 3耳机','先锋SEC-S531BT耳挂','JBL GO音乐金砖 无线...'],
-        info:['独立音频芯片音质媲美有线','轻盈悦耳 动无拘束','甄享音质 自在运动','分离使用智能随身充电续航持久','半入耳式设计,低音增效,佩...','音质与外形兼得 线控带麦 经久...','返光线材 防汗设计','将音乐进行到底  '],
-        newPri:['￥89','￥199','￥299','￥299','￥169','￥398','￥199','￥179'],
-        beforePri:['','￥299','','￥699','','518','￥599','￥269']
-      }
-    }
+    props:["msg"]
   }
 </script>
 
