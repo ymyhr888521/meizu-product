@@ -1,12 +1,7 @@
 <template>
     <div class="left">
         <ul class="nav-list">
-          <li><a href="#">推荐</a></li>
-          <li><a href="#">手机</a></li>
-          <li><a href="#">声学</a></li>
-          <li><a href="#">配件</a></li>
-          <li><a href="#">生活</a></li>
-          <li><a href="#">其他</a></li>
+          <li v-for="(item,index) in msg"><a href="#">{{item.title}}</a></li>
         </ul>
     </div>
 </template>
@@ -14,6 +9,7 @@
 <script>
     export default {
         name: "sortLeft",
+        props:['msg'],
         mounted(){
           this._click();
         },
@@ -52,10 +48,24 @@
     overflow: hidden;
     border-left:.03rem solid #fff;
   }
+  .left>ul>li{
+    width:100%;
+    height:.3rem;
+    line-height:.3rem;
+    margin-top:.6rem;
+    overflow: hidden;
+    border-left:.03rem solid #fff;
+  }
 
   .left>ul>li:nth-of-type(1){
     border-left:.03rem solid #0099ff;
   }
+
+  .left>ul>li:nth-of-type(1)>a{
+    color:#0099ff;
+  }
+
+
 
   .left>ul>li>a{
     color:#333;

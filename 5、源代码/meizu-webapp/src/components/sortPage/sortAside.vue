@@ -1,7 +1,8 @@
 <template>
     <div class="main">
-      <sort-left></sort-left>
-      <sort-right></sort-right>
+      <sort-left :msg="msg"></sort-left>
+
+      <sort-right :index="index" :msg="msg"></sort-right>
     </div>
 </template>
 
@@ -10,7 +11,14 @@
     import SortRight from "./sortRight";
     export default {
         name: "sortAside",
-      components: {SortRight, SortLeft}
+        props:['msg'],
+        data(){
+            return{
+              index:0
+            }
+        },
+        
+        components: {SortRight, SortLeft}
     }
 </script>
 

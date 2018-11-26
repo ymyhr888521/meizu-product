@@ -479,7 +479,6 @@
   "far":["4.58千米","6.32千米","7.08千米","7.58千米","7.78千米","8.78千米","9.58千米","9.72千米","9.96千米","10.58千米","12.58千米","35.58千米","49.58千米"]
 
 },
-
   "sortData": {
     "imgs":["../../../static/sort1.png","../../../static/sort2.png","../../../static/sort3.png","../../../static/sort4.png"]
   },
@@ -501,7 +500,167 @@
     "money":["￥9.90","￥3998.00","￥3998.00"],
     "p":["共1件商品 合计:","共1件商品 合计:","共1件商品 合计:"],
     "span":["￥9.90","￥3998.00","￥3998.00"]
+  },
+
+"sort":[
+  {
+    "title": "推荐",
+    "right": [
+      {
+        "title": "推荐",
+        "more": "",
+        "banner": "../../../static/sortbanner1.png",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-3.png","name":"魅族 16X" },
+          {"imgs":"../../../static/sort1-4.png","name":"魅族 X8" },
+          {"imgs":"../../../static/sort1-5.png","name":"魅族 Note8" },
+          {"imgs":"../../../static/sort1-6.png","name":"魅族V8高配版" },
+          {"imgs":"../../../static/sort1-7.png","name":"魅族 15" },
+          {"imgs":"../../../static/sort1-8.png","name":"魅族 15 Plus" },
+          {"imgs":"../../../static/sort1-9.png","name":"魅族 M15" }
+        ]
+
+      }
+    ]
+  },
+  {
+    "title": "手机",
+    "right": [
+      {
+        "title": "手机",
+        "more": "查看更多商品",
+        "banner": "../../../static/sortbanner.png",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-3.png","name":"魅族 16X" },
+          {"imgs":"../../../static/sort1-4.png","name":"魅族 X8" },
+          {"imgs":"../../../static/sort1-5.png","name":"魅族 Note8" },
+          {"imgs":"../../../static/sort1-6.png","name":"魅族V8高配版" },
+          {"imgs":"../../../static/sort1-7.png","name":"魅族 15" },
+          {"imgs":"../../../static/sort1-8.png","name":"魅族 15 Plus" },
+          {"imgs":"../../../static/sort1-9.png","name":"魅族 M15" }
+        ]
+
+      }
+    ]
+  },
+  {
+    "title": "声学",
+    "right": [
+      {
+        "title": "耳机",
+        "banner": "",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-3.png","name":"魅族 16X" },
+          {"imgs":"../../../static/sort1-4.png","name":"魅族 X8" },
+          {"imgs":"../../../static/sort1-5.png","name":"魅族 Note8" },
+          {"imgs":"../../../static/sort1-6.png","name":"魅族V8高配版" }
+        ]
+      },
+      {
+        "title": "音箱",
+        "more": "查看更多商品",
+        "banner": "",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-3.png","name":"魅族 16X" }
+        ]
+
+      }
+    ]
+  },
+  {
+    "title": "配件",
+    "right": [
+      {
+        "title": "壳膜套",
+        "more": "查看更多商品",
+        "banner": "",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-3.png","name":"魅族 16X" },
+          {"imgs":"../../../static/sort1-4.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-5.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-6.png","name":"魅族 16X" }
+        ]
+
+      },
+      {
+        "title": "数据线",
+        "banner": "",
+        "more": "查看更多商品",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-3.png","name":"魅族 16X" },
+          {"imgs":"../../../static/sort1-4.png","name":"魅族 X8" },
+          {"imgs":"../../../static/sort1-5.png","name":"魅族 Note8" },
+          {"imgs":"../../../static/sort1-6.png","name":"魅族V8高配版" }
+        ]
+
+      },
+      {
+        "title": "移动电源",
+        "banner": "",
+        "more": "查看更多商品",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus"}
+        ]
+
+      }
+    ]
+  },
+  {
+    "title": "生活",
+    "right": [
+      {
+        "title": "包",
+        "banner": "",
+        "more": "查看更多商品",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" },
+          {"imgs":"../../../static/sort1-3.png","name":"魅族 16X" },
+          {"imgs":"../../../static/sort1-4.png","name":"魅族 X8" }
+        ]
+
+      },
+      {
+        "title": "箱子",
+        "banner": "",
+        "more": "查看更多商品",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" }
+        ]
+
+      }
+    ]
+  },
+  {
+    "title": "其他",
+    "right": [
+      {
+        "title": "其他",
+        "banner": "",
+        "more": "查看更多商品",
+        "list":[
+          {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },
+          {"imgs":"../../../static/sort1-2.png","name":"魅族 16th Plus" }
+        ]
+
+      }
+    ]
   }
+]
+
 
 
 

@@ -1,72 +1,58 @@
 <template>
-  <div class="all">
-    <div class="banner">
-      <img src="../../../static/sortbanner.png">
-    </div>
+  <div class="right">
+    <div class="container" v-for="(con,it) in msg">
 
-    <div class="title">
-      <h3>新品</h3>
-    </div>
+        <div class="all" v-for="(all,idx) in con.right">
 
-    <div class="production">
-      <ul>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
+          <div class="banner" v-if="all.banner">
+            <img :src="all.banner">
+          </div>
 
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
+          <div class="title">
+            <h3>{{all.title}}</h3>
+          </div>
 
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
-        </li>
-        <li>
-          <img src="../../../static/pro1.png" >
-          <span>1323</span>
-        </li>
-      </ul>
-    </div>
+          <div class="production">
+              <ul>
+                  <li v-for="(item,index) in all.list">
+                      <img :src="item.imgs" >
+                      <span>{{item.name}}</span>
+                  </li>
+              </ul>
+          </div>
 
-    <div class="btn">
-      <input type="button" value="查看更多商品">
+          <div class="btn" v-if="all.more">
+            <input type="button" value="查看更多商品">
+          </div>
+        </div>
+
     </div>
   </div>
 </template>
 
 <script>
     export default {
-        name: "sortRight"
+        name: "sortRight",
+        props:["msg",'index']
     }
 </script>
 
 <style scoped>
+.right{
+  width:100%;
+  overflow: auto;
+}
+.container{
+  background: #fff;
+  width:100%;
+  height:100%;
+  overflow: auto;
+}
+
 .all{
-    background: #fff;
-    width:100%;
+  background: #fff;
+  width:100%;
+
 }
 .all>.banner{
   padding:.24rem .24rem;

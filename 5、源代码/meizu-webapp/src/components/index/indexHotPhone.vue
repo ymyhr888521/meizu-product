@@ -53,7 +53,6 @@
 }
 .all-contain>.show{
       height:2.32rem;
-      background: #0f0;
 }
 
 .all-contain>.show img{
