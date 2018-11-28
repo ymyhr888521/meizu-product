@@ -1,8 +1,8 @@
 <template>
     <div class="main">
-      <sort-left :msg="msg"></sort-left>
+      <sort-left @change="changeSort" :msg="msg" :i="index"></sort-left>
 
-      <sort-right :index="index" :msg="msg"></sort-right>
+      <sort-right @eve="changeBor"  :index="index" :msg="msg"></sort-right>
     </div>
 </template>
 
@@ -17,7 +17,16 @@
               index:0
             }
         },
-        
+        methods:{
+           changeSort(idx){
+                this.index = idx;
+                console.log('changeAside'+idx)
+           },
+            changeBor(i){
+                this.index = i;
+                console.log(this.index)
+            }
+        },
         components: {SortRight, SortLeft}
     }
 </script>

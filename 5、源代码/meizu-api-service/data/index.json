@@ -552,6 +552,7 @@
     "right": [
       {
         "title": "耳机",
+        "more": "查看更多商品",
         "banner": "",
         "list":[
           {"imgs":"../../../static/sort1-1.png","name":"魅族 16th" },

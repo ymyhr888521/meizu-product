@@ -97,7 +97,7 @@
 }
 .star-product>.list>.phone-info>dl>dd>p:nth-of-type(2)>span:nth-of-type(1){
     font-size: .27rem;
-    color:#cc6666;
+    color:#ff3366;
 
 }
 .star-product>.list>.phone-info>dl>dd>p:nth-of-type(2)>span:nth-of-type(2){

@@ -12,9 +12,9 @@
 
           <div><a href="#">忘记密码?</a></div>
 
-          <div class="btnC">
+          <router-link to="/mine" tag="div" class="btnC">
               <input type="button" class="btn" value="登录">
-          </div>
+          </router-link>
 
           <div>
               <a href="#">注册</a>

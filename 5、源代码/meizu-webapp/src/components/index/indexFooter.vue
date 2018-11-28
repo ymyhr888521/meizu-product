@@ -3,7 +3,7 @@
     <div>
       <ul>
         <li class="link"><router-link to="/"><i class="iconfont">&#xe629;</i><span>首页</span></router-link></li>
-        <li class="link"><router-link to="/" ><i class="iconfont">&#xe638;</i><span>分类</span></router-link></li>
+        <li class="link"><router-link to="/sortPage" ><i class="iconfont">&#xe638;</i><span>分类</span></router-link></li>
         <li class="link"><router-link to="/find" ><i class="iconfont">&#xe746;</i><span>发现</span></router-link></li>
         <li class="link"><router-link to="/goodsCart"><i class="iconfont">&#xe602;</i><span>购物车</span></router-link></li>
         <li class="link"><router-link to="/mine" ><i class="iconfont">&#xe64a;</i><span>我的</span></router-link></li>

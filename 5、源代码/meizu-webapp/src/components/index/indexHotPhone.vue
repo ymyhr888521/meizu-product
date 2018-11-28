@@ -34,7 +34,7 @@
 
 <style scoped>
 .all-contain{
-      background: #ff0;
+
       display: flex;
       flex-direction: column;
 }
@@ -108,7 +108,7 @@
 }
 .all-contain>.box-phone>.contain>ul>li>span{
     font-size: .15rem;
-    color:#cc6666;
+    color:#ff3366;
     font-weight: 600;
 
 }

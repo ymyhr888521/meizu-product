@@ -1,8 +1,8 @@
 <template>
     <div class="header">
-        <div>
+       <router-link to="/reg" tag="div">
            <img src="../../../static/mine.png">
-        </div>
+       </router-link>
 
         <div>
           <a href="#">

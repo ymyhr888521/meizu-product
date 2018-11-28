@@ -33,7 +33,36 @@
 <script>
     export default {
         name: "sortRight",
-        props:["msg",'index']
+        props:["msg",'index'],
+        data(){
+              return{
+                  cheight : 0,
+                  num:0
+              }
+        },
+        mounted(){
+          this.cheight = $('.container')[0].offsetHeight;
+          setTimeout(()=>{
+              this._scroll();
+         },200)
+
+        },
+        methods:{
+            _scroll(){
+                $('.right')[0].ontouchend=()=>{
+                 this.num = (Math.round($('.right').scrollTop()/this.cheight));
+                  this.$emit('eve',this.num)
+                }
+            },
+
+        },
+        watch:{
+          index(n,o){
+            console.log(n)
+              $('.right').animate({scrollTop:n*this.cheight},'normal');
+              // $('.right').scrollTop(n*this.cheight)
+          },
+        }
     }
 </script>
 
