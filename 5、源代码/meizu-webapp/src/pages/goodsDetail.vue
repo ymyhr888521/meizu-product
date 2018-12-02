@@ -1,14 +1,31 @@
 <template>
     <div class="all">
-        <goods-show></goods-show>
+        <goods-info :msg="msg"></goods-info>
     </div>
 </template>
 
 <script>
-    import GoodsShow from "../components/goodsDetail/goodsShow";
+    import GoodsInfo from "../components/goodsDetail/goodsInfo";
+    import apis from '../apis/apis'
     export default {
         name: "goodsDetail",
-      components: {GoodsShow}
+        components: {GoodsInfo},
+        data(){
+          return {
+            msg:{}
+          }
+        },
+        mounted(){
+          this._indexComponent();
+        },
+        methods:{
+          _indexComponent(){
+            apis.getData(data=>{
+              this.msg = data;
+              console.log(this.msg)
+            })
+          }
+        }
     }
 </script>
 

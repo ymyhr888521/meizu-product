@@ -4,7 +4,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import Mescroll from 'mescroll.js'
+import 'mescroll.js/mescroll.min.css'
 
 
 

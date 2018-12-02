@@ -6,6 +6,7 @@
   </div>
 </template>
 <script>
+
     import '../assets/css/public.css';
     import 'swiper/dist/css/swiper.css';
     import apis from '../apis/apis';
@@ -20,6 +21,7 @@
           indexHeader,
           indexMain,
           indexFooter,
+
         },
       data(){
           return {
@@ -42,7 +44,9 @@
 </script>
 
 <style scoped>
-.all{
+
+
+  .all{
   display: flex;
   flex-direction: column;
   height: 100%;
